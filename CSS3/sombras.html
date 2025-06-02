@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sombras CSS</title>
+
+     <style>
+          div{
+               width: 300px;
+			height: 300px;
+			background-color: gray;
+               margin: auto;
+               margin-top: 50px;
+    
+               /* SOMBRAS CSS */
+               box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.70);
+
+               /* SOMBRA MULTIPLE */
+               box-shadow:    2px 2px 0  5px #AAA,
+						6px 6px 2px 10px #777,
+               			12px 12px 8px 20px #444;
+          }
+
+          h1{
+               /* SOMBRAS EN TEXTO */
+               text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.70);
+          }
+
+     </style>
+
+</head>
+<body>
+
+     <div></div>
+
+     <h1>Texto de prueba</h1>
+
+
+</body>
+</html>

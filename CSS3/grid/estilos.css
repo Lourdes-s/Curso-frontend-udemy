@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #eee;
+	color: #393e4d;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+h1{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 55px;
+}
+
+.grid{
+	width: 90%;
+	max-width: 1000px;
+	border: 10px solid #393e4d;
+	margin: auto;
+	font-size: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.grid div{
+	display: block;
+	padding: 20px;
+	color: #fff;
+	background: #2cbab5;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+}

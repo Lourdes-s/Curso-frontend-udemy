@@ -1,0 +1,21 @@
+.grid{
+     display: grid;
+     grid-gap: 20px;
+     grid-template-columns: 100px 1fr 100px;
+     grid-template-rows: 100px 200px 100px;
+
+     /*grid-auto-columns: 300px;
+     grid-auto-flow: column;*/
+
+     grid-auto-flow: dense;
+}
+
+.grid .span2{
+     background: #8a3bb5;
+     grid-column: span 2;
+}
+
+.grid .span3{
+     background: #00fc82;
+     grid-column: span 3;
+}

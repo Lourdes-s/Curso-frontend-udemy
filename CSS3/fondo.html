@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fondos CSS</title>
+
+     <style>
+          #contenedor{
+			margin: auto;
+			width: 500px;
+			height: 500px;
+			border: 1px solid #000;
+          
+               /*FONDO PLANO*/
+               background: #039cb1;
+               background: rgba(146, 11, 11, 0.5);
+
+               /*FONDO DEGRADADOS O GRADIENTES*/
+               background: linear-gradient(90deg, blue, orange);
+               background: radial-gradient(orange, green);
+
+               /*IMAGEN DE FONDO*/
+               /*background-image: url(archivos/fondo1.png);
+               background-repeat: no-repeat;
+               background-attachment: scroll;
+               background-position: center;*/
+
+               background: #000000 url(archivos/fondo1.png) no-repeat scroll center;
+               background-size: cover;
+          
+          }
+
+          .contenido{
+               width: 100%;
+               height: 100%;
+               background-color: rgba(23, 122, 235, 0.8);
+          }
+
+     </style>
+</head>
+<body>
+     
+     <div id="contenedor">
+          <div class="contenido"></div>
+     </div>
+
+     
+</body>
+</html>

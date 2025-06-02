@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Desbordamiento CSS</title>
+
+     <style>
+          p{
+               margin: 0;
+          }
+
+          #desbordamiento{
+               width: 300px;
+			height: 300px;
+			background-color: #ffdb39;
+
+               /* DESBORDAMIENTO 
+                    - auto: aparecerá la barra de scroll cuando lo necesite
+                    -scroll: siempre tendra la barra de scroll
+                    -visible: se podrá observar el desbordamiento
+                    -hidden: no se mostrará el desbordamiento
+               */
+               overflow: auto;
+          }
+
+          #despliegue{
+               column-count: 3;
+               column-gap: 5em;
+               column-rule: 5px solid blue;
+          }
+
+
+     </style>
+</head>
+<body>
+     <div id="desbordamiento">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, itaque sit voluptatum blanditiis iusto autem inventore distinctio harum quos nesciunt repellendus! Atque adipisci ipsum est doloribus, possimus provident beatae repellendus?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, modi. Nulla veniam minus veritatis quos excepturi maxime alias eum repellat cumque! Odit, tempora hic? Ad non quibusdam quisquam libero nobis.</p>
+     </div>
+     <br><br>
+     <hr>
+
+     <div id="despliegue">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem perferendis optio facere repudiandae aliquid! Nam perferendis mollitia sed ad nulla. Voluptatibus in voluptate amet vitae est nulla fugiat tempore exercitationem.
+          </p>
+     </div>
+</body>
+</html>

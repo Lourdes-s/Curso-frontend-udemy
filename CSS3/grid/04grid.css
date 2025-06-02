@@ -1,0 +1,20 @@
+.grid{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 200px);
+
+
+     /* ALINEACION HORIZONTAL */
+     justify-items: center;
+
+     /* ALINEACION VERTICAL */
+     align-items: center;  
+}
+
+.grid .elemento{
+     background: #8a3bb5;
+     justify-self: start;
+     align-self: start;
+}
+

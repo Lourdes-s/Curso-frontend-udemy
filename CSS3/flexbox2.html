@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Flexbox 2 CSS</title>
+
+     <style>
+          .contenedor{
+			width: 23%;
+			height: 400px;
+			background-color: #dedede;
+			float: left;
+			margin: 10px;
+
+			/*Aplicar FLEXBOX*/
+			display: flex;
+			flex-direction: row; 
+		}
+
+		.items{
+			background: lightblue;
+			width: 100px;
+			margin: 10px;
+			text-align: center;
+			line-height: 100px;
+			font-size: 22px;
+		}
+
+          /* ALINEANDO ELEMENTOS EJE PRINCIPAL Y SECUNDARIO */
+          .c1{
+              justify-content: center; 
+              align-items: center;
+          }
+
+          .c2{
+             justify-content: space-around; 
+             align-items: flex-start;
+          }
+
+          .c3{
+               justify-content: space-between;
+               align-items: flex-end;
+          }
+
+          .c4{
+               justify-content: flex-start;
+               align-items: stretch;
+          }
+
+          .c5{
+               justify-content: flex-end;
+               align-items: stretch;
+          }
+
+     </style>
+</head>
+<body>
+     <div class="contenedor c1">
+          <div class="items">1</div>
+          <div class="items">2</div>
+     </div>
+     
+     
+     <div class="contenedor c2">
+          <div class="items">1</div>
+          <div class="items">2</div>
+     </div>
+     
+     <div class="contenedor c3">
+          <div class="items">1</div>
+          <div class="items">2</div>
+     </div>
+     
+     <div class="contenedor c4">
+          <div class="items">1</div>
+          <div class="items">2</div>
+     </div>
+     
+     
+     <div class="contenedor c5">
+          <div class="items">1</div>
+          <div class="items">2</div>
+     </div>
+</body>
+</html>

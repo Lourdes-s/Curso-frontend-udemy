@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animaciones CSS3</title>
+
+     <style>
+          /* PASO 1 KEY FRAME */
+          @keyframes cambiarColor {
+               0%{
+                    background: green;
+               }
+
+               20%{
+                    background: blue;
+               }
+
+               40%{
+                    background: orange;
+               }
+
+               60%{
+                    background: yellow;
+               }
+
+               80%{
+                    background: purple;
+               }
+
+               100%{
+                    background: red;
+               }
+          }
+
+
+
+          /* PASO 2 APLICAR PR0PIEDADES DE ANIMACION */
+          /*
+		- animation-name	-- Nombre a la animacion
+		- animation-duration	-- Duracion
+		- animation-timing-function	-- Movimiento
+		- animation-delay --Retraso
+		- animation-iteration-count	1 | infinite | número -- Cantidad de veces que se repite
+		- animation-direction	normal | reverse | alternate | alternate-reverse - Direccion 
+		- animation-fill-mode	none | forwards | backwards | both -- Que mostrara cuando termine
+		- animation-play-state -- Estao de reproduccion
+		*/
+          .ani{
+               width: 400px;
+			height: 400px;
+			background: gray;
+			margin: auto;
+               margin-top: 50px;
+               animation-name: cambiarColor;
+               animation-duration: 10s;  
+               animation-delay: 0.5s;
+               animation-iteration-count: 2;
+               animation-direction: normal;
+               animation-fill-mode: forwards;
+               animation-play-state: paused;
+
+               /* ATAJO -- nombre duracion timing delay iteration direction fillmode playstate
+			animation: */
+               animation: cambiarColor 10s 0.5 2 normal forwards paused;
+          }
+
+          .ani:hover{
+               animation-play-state: running;
+          }
+
+     </style>
+
+
+</head>
+<body>
+
+     <div class="ani"></div>
+     
+</body>
+</html>

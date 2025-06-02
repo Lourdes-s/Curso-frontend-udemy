@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	background: #E9ECF4;
+}
+
+.grid{
+     width: 90%;
+     max-width: 1000px;
+     margin: 30px auto;
+     display: grid;
+     grid-gap: 20px;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(4,auto);
+
+     grid-template-areas:     "header      header      header"
+                              "contenido   contenido   sidebar"
+                              "widget1     widget2     sidebar"
+                              "footer      footer      footer";
+}
+
+.grid div,
+.grid header,
+.grid aside, 
+.grid footer{
+     background: #fff;
+     padding: 20px;
+}
+
+.grid header{
+     background: #383f4d;
+     color: #fff;
+     grid-area: header;
+}
+
+.grid .contenido{
+     grid-area: contenido;
+}
+
+.grid aside{
+     background: #af5fdd;
+     color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     grid-area: sidebar;
+}
+
+.grid .widget{
+     background: #1aa9ed;
+     color: #fff;
+     height: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.grid .w1{
+     grid-area: widget1;
+}
+
+.grid .w2{
+     grid-area: widget2;
+}
+
+.grid footer{
+     background: #3a3f4d;
+     color: #fff;
+     grid-area: footer;
+}
+
+
+@media screen and (max-width: 700px){
+     .grid{
+          grid-template-areas:     "header      header      header"
+                                   "contenido   contenido   contenido"
+                                   "sidebar     sidebar     sidebar"
+                                   "widget1     widget1     widget2"
+                                   "footer      footer      footer";
+     }
+}
+
+
+

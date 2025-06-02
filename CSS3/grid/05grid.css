@@ -1,0 +1,16 @@
+.grid{
+	display: grid;
+     grid-gap: 20px;
+     height: 800px;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(3, 100px);
+
+
+     /*Alinear Horizontalmente*/
+     justify-content: space-around;
+
+
+     /*Alinear Verticalmente*/
+     align-content: space-evenly;
+	
+}

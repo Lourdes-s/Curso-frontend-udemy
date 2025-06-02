@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="archivos/fontawesome/css/all.min.css">
+     <title>Clip Path CSS3</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+          }
+
+          body{
+               background: #dddddd;
+               font-family: Arial, Helvetica, sans-serif;
+          }
+
+          .contenedor{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;   
+          }
+
+          .card{
+               background: #dc9325;
+               border-radius: 10px;
+               width: 40%;
+               height: 230px;
+               color: #fff;
+               clip-path: circle(10% at 0% 0%);
+               transition: all .5s;
+          }
+
+          .card:hover{
+               clip-path: circle(100%);
+          }
+
+          .card-header span{
+               position: relative;
+               top: 10px;
+               left: 12px;
+          }
+
+          .card-contenedor{
+               padding: 35px;
+          }
+
+          .card p{
+               padding: 5px;
+          }
+
+          .card button{
+               padding: 10px;
+               border: 1px solid #dedede;
+               border-radius: 50px;
+               font-size: 14px;
+               background-color: #dc9325;
+               color: #fff;
+               cursor: pointer;
+               transition: all .5s;
+          }
+
+          .card button:hover{
+               background-color: #bb760e; 
+          }
+
+
+     </style>
+</head>
+<body>
+     <div class="contenedor">
+          <div class="card">
+               <div class="card-header">
+                    <span class="fas fa-angle-down"></span>
+               </div>
+                      
+               <div class="card-contenedor">
+                    <div class="card-titulo">
+                         <h1>Lorem Ipsum</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, repellendus aperiam ex exercitationem eaque natus at quidem maiores delectus amet iste voluptate! Dolores in harum, esse modi maxime nemo nobis.</p>
+                    <button>Leer más</button>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

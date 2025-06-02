@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario CSS3</title>
+
+     <style>
+          *{
+			font-family: arial;
+		}
+
+          form{
+               background-color: #333;
+               width: 30%;
+               height: 400px;
+               margin: auto;
+               margin-top: 50px;
+               padding: 30px;
+               border: 20px solid #222;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+          }
+
+          .two-columns{
+               display: flex;
+               justify-content: space-between;
+          }
+
+          .fields{
+               display: flex;
+               flex-direction: column;
+          }
+
+          label{
+               margin-bottom: 10px;
+               text-transform: uppercase;
+               font-weight: 700;
+               color: #dedede;
+               font-size: 14px;
+          }
+
+          input,textarea{
+               background: transparent;
+               border: none;
+               border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+               padding: 10px;
+               color: #fff;
+               transition: all 0.3s;
+          }
+
+          input:focus,
+          textarea:focus{
+               outline: none;
+          }
+
+          input:focus{
+               border-bottom: 2px solid rgba(255, 255, 255, 1);
+          }
+
+          textarea{
+               resize: none;
+               border: 2px solid rgba(255, 255, 255, 0.5);
+               flex-basis: 100px;
+               transition: all 0.3s;
+          }
+
+          textarea:focus{
+               border: 2px solid rgba(255, 255, 255, 1);
+          }
+
+          .btn{
+               display: flex;
+               justify-content: center;
+          }
+
+          button{
+               padding: 15px 40px;
+               background: #1baea990;
+               border: none;
+               font-size: 15px;
+               font-weight: 700;
+               text-transform: uppercase;
+               color: #fff;
+               cursor: pointer;
+               transition: all 0.3s;
+          }
+
+          button:hover{
+               padding: 15px 70px;
+               background: #1baea9;
+          }
+
+     </style>
+</head>
+<body>
+     <form>
+		<div class="two-columns">
+			<div class="fields">
+				<label for="name">Nombre</label>
+				<input id="name" type="text" name="name" autocomplete="off"> 	
+			</div>
+			
+			<div class="fields">
+				<label for="lastname">Apellido</label>
+				<input id="lastname" type="text" name="lastname" autocomplete="off">	
+			</div>
+		</div>
+
+		<div class="two-columns">
+			<div class="fields">
+				<label for="tel">Telefono</label>
+				<input id="tel" type="text" name="tel" autocomplete="off">
+			</div>
+
+			<div class="fields">
+				<label for="email">Correo</label>
+				<input id="email" type="email" name="email" autocomplete="off">	
+			</div>
+		</div>
+		
+
+		<div class="fields">
+			<label for="coment">Comentarios</label>
+			<textarea id="coment"></textarea>
+		</div>
+
+		<div class="btn">
+			<button>Enviar</button>	
+		</div>
+	</form>
+</body>
+</html>
