@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fecha y hora JS</title>
+</head>
+<body>
+     <script>
+          (function() {
+
+               //Obtener fecha
+               var fecha = new Date();
+               document.write(fecha);
+
+               //Obtener horas
+               var hora = (fecha.getHours() - 12); 
+               var minutos = fecha.getMinutes(); 
+               var segundos = fecha.getSeconds(); 
+
+
+               //Obtener fechas
+               var dia = fecha.getDay();
+               var diames = fecha.getDate();
+               var mes = fecha.getMonth();
+               var year = fecha.getFullYear();
+
+
+
+
+          }());
+     </script>
+</body>
+</html>

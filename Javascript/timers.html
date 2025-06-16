@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Timers JS</title>
+</head>
+<body>
+     <script>
+         //Timeout
+          (function() {
+               function holaMundo() {
+                    console.log("Hola Mundo");
+               }
+
+               setTimeout(holaMundo, 3000);
+
+
+
+          }())
+
+          //Interval
+          (function() {
+               var contador = 0;
+               
+               function holaMundo() {
+                    contador++;
+                    console.log(contador);
+
+                    if(contador == 10){
+                         clearInterval(repeticion);
+                    }
+               }
+
+              var repeticion = setInterval(holaMundo, 1000);
+
+
+
+          }())
+
+
+     </script>
+</body>
+</html>

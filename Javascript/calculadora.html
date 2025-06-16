@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculadora JS</title>
+
+     <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body{
+			font-family: arial;
+			background: #ccc;
+			color: #3ba8db;
+		}
+
+		.contenedor{
+			width: 70%;
+			margin: 100px auto;
+			background: #21295c;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.inputs{
+			width: 80%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.inputs input{
+			width: 50%;
+			margin: 10px;
+			padding: 20px;
+			text-align: center;
+			font-size: 25px;
+			font-weight: 600;
+			color: #21295c;
+		}
+
+		.btns{
+			display: flex;
+			flex-direction: row;
+			width: 80%;
+			justify-content: space-around;
+		}
+
+		.btns button{
+			width: 25%;
+			height: 50px;
+			margin: 10px;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 14px;
+			background: #3ba8db;
+			color: #fff;
+			border: 0;
+			transition: all 0.3s;
+		}
+
+
+		.btns button:hover{
+			background: #92f8ff80;
+		}
+
+		.result{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			width: 80%;
+			margin: 30px 0 10px 0;
+		}
+
+		.result p{
+			color: #fff;
+			font-size: 45px;
+			font-weight: 700;
+		}
+		
+	</style>
+</head>
+<body>
+     <div class="contenedor">
+		<div id="inputs" class="inputs">
+			<input type="number" id="numero1">
+			<input type="number" id="numero2">
+		</div>
+
+		<div id="btns" class="btns">
+			<button id="suma">Sumar</button>
+			<button id="resta">Restar</button>
+			<button id="multiplica">Multiplicar</button>
+			<button id="divide">Dividir</button>
+		</div>
+			
+		<div class="result">
+			<p id="resultado">-</p>
+		</div>	
+	</div>
+
+
+
+	<script type="text/javascript">
+		var operaciones = function (e) {
+			var numero1 = parseFloat(document.getElementById("numero1").value);
+			var numero2 = parseFloat(document.getElementById("numero2").value);
+			var result = document.getElementById("resultado");
+			var operacion = e.target.id;
+			
+
+			if (operacion == "suma") {
+				var resultado = numero1 + numero2;
+			}
+			else if (operacion == "resta") {
+				var resultado = numero1 - numero2;
+			}
+			else if (operacion == "multiplica") {
+				var resultado = numero1 * numero2;
+			}
+			else if (operacion == "divide") {
+				var resultado = numero1 / numero2;
+			}
+
+			result.innerHTML = resultado;
+			
+		}
+
+
+		//Obtenemos el evento click en cada boton
+		var botones = document.getElementById("btns");
+		botones.addEventListener("click", operaciones);
+
+	
+	</script>
+</body>
+</html>

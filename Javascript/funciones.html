@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Funciones JS</title>
+</head>
+<body>
+     <script>
+          var resta = function (valor1, valor2){
+               var resultado = valor1 - valor2;
+               return resultado;
+          }
+
+          document.write( resta(100, 30) );
+          
+
+
+          //Variable Global 
+          var variableGlobal = "Hola mundo";
+
+
+
+          var valorMinimo = function (valor1, valor2) {
+               //Variable Local
+               var variableLocal = "Esto es una variable local";
+
+              if (valor1 < valor2) {
+                   return valor1;
+              } else{
+                   return valor2
+              }
+          }
+
+          document.write(valorMinimo(100,80));
+          document.write("<br>");
+          document.write(valorMinimo(50,20));
+          document.write("<br>");
+          document.write(valorMinimo(60,90));
+
+     </script>
+</body>
+</html>

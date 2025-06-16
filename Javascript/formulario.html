@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Validación de Formulario JS</title>
+     <style type="text/css">
+		*{
+			font-family: arial;
+			color: #fff;
+		}
+
+		form{
+			width: 30%;
+			height: 400px;
+			background: #333;
+			margin: auto;
+			margin-top: 50px;
+			padding: 30px;
+			border: 20px solid #222;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.fields{
+			display: flex;
+			flex-direction: column;
+		}
+
+		.two-columns{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.radiobutton, .term{
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		.radiobutton input{
+			margin-right: 30px;
+		}
+
+		label{
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+			color: #dedede;
+		}
+
+		input,textarea{
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid rgba(255,255,255,0.5);
+			padding: 10px;
+			transition: all 0.3s;
+			margin-bottom: 10px;
+		}
+
+		input:focus,
+		textarea:focus{
+			outline: none;
+		}
+
+		input:focus{
+			border-bottom: 2px solid rgba(255,255,255,1);
+		}
+
+
+		textarea{
+			resize: none;
+			border: 2px solid rgba(255,255,255,0.5);
+			flex-basis: 50px;
+
+		}
+
+		textarea:focus{
+			border: 2px solid rgba(255,255,255,1);
+		}
+
+
+		.btn{
+			display: flex;
+			justify-content: center;
+		}
+
+		input[type="submit"]{
+			padding: 15px 40px;
+			background: #1baea990;
+			border: none;
+			font-size: 15px;
+			font-weight: 600;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+
+		input[type="submit"]:hover{
+			padding: 15px 65px;
+			background: #1baea9;
+		}
+	</style>
+</head>
+<body>
+	<form id="formulario" name="formulario">
+		<div class="two-columns">
+			<div class="fields">
+				<label for="name">Nombre</label>
+				<input id="name" type="text" name="name" autocomplete="off"> 	
+			</div>
+			
+			<div class="fields">
+				<label for="lastname">Apellido</label>
+				<input id="lastname" type="text" name="lastname" autocomplete="off">	
+			</div>
+		</div>
+
+		<div class="two-columns">
+			<div class="fields">
+				<label for="tel">Telefono</label>
+				<input id="tel" type="text" name="tel" autocomplete="off">
+			</div>
+
+			<div class="fields">
+				<label for="email">Correo</label>
+				<input id="email" type="email" name="email" autocomplete="off">	
+			</div>
+		</div>
+		
+		<div class="fields radiobutton">
+			<label for="hombre">Hombre</label>
+			<input type="radio" name="sexo" id="hombre" value="Hombre">
+			<label for="mujer">Mujer</label>
+			<input type="radio" name="sexo" id="mujer" value="Mujer">
+		</div>
+
+		<div class="fields">
+			<label for="coment">Comentarios</label>
+			<textarea id="coment"></textarea>
+		</div>
+
+		<div class="fields term">
+			<label for="term">Terminos y Condiciones</label>
+			<input type="checkbox" name="term" id="term">
+		</div>
+
+		<div class="btn">
+			<input type="submit" name="enviar" id="btn" value="Enviar">
+		</div>
+     </form>    
+     
+     <script>
+          var  formulario = document.getElementById("formulario"),
+               boton = document.getElementById("btn");
+
+
+          function validarDatos(e) {
+               var  inputNombre = document.formulario.name.value,
+                    inputApellido = document.formulario.lastname.value,
+                    inputEmail = document.formulario.email.value;
+
+               if (inputNombre == 0 || inputApellido == 0 || inputEmail == 0) {
+                    alert("Campos necesarios vacios");
+                    e.preventDefault();
+               }
+          }
+
+          function validarRB(e) {
+               if (document.formulario.sexo[0].checked == true || document.formulario.sexo[1].checked == true) {
+               }
+               else{     alert("Seleccione un sexo");  
+                         e.preventDefault();
+               }
+          }
+
+          function validarTerminos(e) {
+               if (document.formulario.term.checked == true) {
+               }
+               else{     alert("Debe aceptar terminos y condiciones");  
+                         e.preventDefault();
+               }
+          }
+
+
+          //Funcion que ejecuta todo
+          function validar(e) {
+               validarDatos(e);
+               validarRB(e);
+               validarTerminos(e);
+          }
+
+
+          //Eventos 
+          formulario.addEventListener("submit", validar);
+
+     </script>
+</body>
+</html>
