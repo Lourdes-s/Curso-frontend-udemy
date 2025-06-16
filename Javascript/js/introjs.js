@@ -10,7 +10,7 @@ MULTILINEA*/
      console.log(2+2);
      console.info('Mostrando una informacion');
      console.warn('Estamos mostrando una advertencia');
-     console.error('Mostrando un error');*/
+     console.error('Mostrando un error');
 
 //Document Write
      document.write('Hola este mensaje se mostrará en mi web');
