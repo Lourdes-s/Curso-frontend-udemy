@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Media Query</title>
+
+     <style>
+          /* ESTILOS GENERALES  */
+          *{
+               margin: 0;
+               padding: 0;
+          }
+
+          div{
+               width: 25%;
+               height: 200px;
+               margin-top: 100px;
+               float: left;
+          }
+
+          div:nth-child(1){
+               background: rgb(157, 79, 221);
+          }
+
+          div:nth-child(2){
+               background: rgb(79, 176, 221);
+          }
+
+          div:nth-child(3){
+               background: rgb(79, 221, 110);
+          }
+
+          div:nth-child(4){
+               background: rgb(221, 79, 202);
+          }
+
+          /* ESTILOS MEDIA QUERY */
+
+          /* Desde 1000px hacia arriba */
+          @media screen and (min-width:1000px){
+               div:nth-child(1){
+                    background: rgb(0, 0, 0);
+               }  
+          }
+
+          /* Desde 700px hacia abajo */
+          @media screen and (max-width:600px){
+               div{
+                    width: 100%;
+                    margin-top: 0;
+               }
+          }
+
+          /* Rango entre 1000px hasta 640px */
+          @media screen and (max-width:1000px) and (min-width:600px){
+               div:nth-child(2){
+                    background: rgb(128, 128, 128);
+               }
+
+               div{
+                    width: 50%;
+                    margin-top: 0;
+               }
+          }
+     </style>
+
+</head>
+<body>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+</body>
+</html>
